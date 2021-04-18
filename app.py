@@ -22,6 +22,10 @@ from flask_sqlalchemy import SQLAlchemy
 from login import username
 from login import password
 
+
+# Setting up our Flask application.
+app = Flask(__name__)
+
 #################################################
 # Database Setup
 #################################################
@@ -62,8 +66,7 @@ session = Session(engine)
 
 # print(names)
 
-# Setting up our Flask application.
-app = Flask(__name__)
+
 
 # create route that renders index.html template
 @app.route("/")
